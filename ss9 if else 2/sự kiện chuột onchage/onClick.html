@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="onClick.js"></script> -->
+</head>
+
+<body>
+    <form>
+        <img id="myImage" src="https://cdn.vietnambiz.vn/thumb_w/600/2019/5/10/avatar1557453400089-15574534000951558429651.jpg" width="300px" />
+        <p> Click button below to move the image to right </p>
+        <input type="button" value="Click Me" onclick="moveRight()" ;/>
+    </form>
+    <script>
+        let imgObj = null;
+        imgObj = document.getElementById('myImage');
+
+        function init() {
+            imgObj = document.getElementById('myImage');
+            imgObj.style.position = 'relative';
+            imgObj.style.left = '1 px';
+        }
+
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+        }
+        window.onload = init;
+    </script>
+</body>
+
+</html>
